@@ -1,12 +1,14 @@
 <?php
 
+require_once __DIR__ . "/Product.php";
+
 class Food extends Product{
     
     protected $expire;
 
-    public function __construct($_name, $_image, $_category){
+    public function __construct($_name, $_image, $_category, $_price){
         
-        parent::__construct($_name, $_image, $_category);
+        parent::__construct($_name, $_image, $_category, $_price);
     }
 
      public function setExpire($_expire){
