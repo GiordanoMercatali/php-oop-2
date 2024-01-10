@@ -52,7 +52,7 @@ var_dump($salmon_tin);
                 <i class="<?php echo $item->getCategory()->getIcon(); ?>"></i>
                 <span> <?php echo $item->getCategory()->getName(); ?> </span>
                 <?php if(is_a($item, 'Food')) { ?>
-                    <span> <?php echo $item->getExpired() ?> </span> 
+                    <span> <?php echo $item->getExpired() . ' ' . $item->getFlavor(); ?> </span> 
                     <?php } ?>
             </div>
         </div>

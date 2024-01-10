@@ -1,17 +1,19 @@
 <?php
 
 require_once __DIR__ . "/Product.php";
+require_once __DIR__ . "/../Traits/Flavor.php";
 
 class Food extends Product{
+   use Flavor;
     
     protected $expiration_date;
-    protected $flavor;
+   //  protected $flavor;
 
     public function __construct($_name, /*$_image,*/ Category $_category, $_price, $_amount, $_expiration_date, $_flavor){
         
-        parent::__construct($_name, /*$_image,*/  $_category, $_price, $_amount);
-        $this->setExpired($_expiration_date);
-        $this->flavor = $_flavor;
+      parent::__construct($_name, /*$_image,*/  $_category, $_price, $_amount);
+      $this->setExpired($_expiration_date);
+      $this->flavor = $_flavor;
     }
 
      public function setExpired($_expiration_date){
@@ -22,15 +24,16 @@ class Food extends Product{
          }
      }
 
-     public function getExpired(){
+   public function getExpired(){
         return $this->expiration_date;
      }
-
-     public function setFlavor($_flavor){
+/*
+   public function setFlavor($_flavor){
             $this->flavor = $_flavor;
     }
 
     public function getFlavor(){
        return $this->flavor;
     }
+   */
 }
