@@ -24,6 +24,15 @@ $item_list = [
     $wood_kennel = new Kennel ('Wood kennel', $dog, 100, 1, 'big'),
 ];
 
+$mouse = new Toy ('Toy mouse', $cat, 2, 1, 'polyester', 'stuffed animal');
+
+try {
+    $result = $mouse->removeAmount(2);
+    echo "Thanks for your purchase!";
+} catch (Exception $e) {
+    echo "Error! Not enough pieces of this article.";
+}
+
 /*
     $bone = new Toy();
     $bone->setName('Toy bone');

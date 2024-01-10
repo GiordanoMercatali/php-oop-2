@@ -27,8 +27,11 @@ $salmon_tin = new Food ('salmon tin', 'salmon-tin.png', 'cat', 5 );
 var_dump($salmon_tin);
 */
 
-var_dump($schesir);
-var_dump($bone);
+// var_dump($schesir);
+// var_dump($bone);
+
+
+
 ?>
 
 <!DOCTYPE html>
