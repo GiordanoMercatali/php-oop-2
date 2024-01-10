@@ -19,7 +19,7 @@ $cat = new Category ('cat', 'cat.png');
     $newProduct->addAmount(1);
 */
 $item_list = [
-    $schesir = new Food ('Schesir', $cat, 4, 10, '20/12/24', 'tuna'),
+    $schesir = new Food ('Schesir', $cat, 4, 10, '2024-01-09', 'tuna'),
     $bone = new Toy ('Toy bone', $dog, 2, 1, 'rubber', 'squeaking toy'),
     $wood_kennel = new Kennel ('Wood kennel', $dog, 100, 1, 'big'),
 ];

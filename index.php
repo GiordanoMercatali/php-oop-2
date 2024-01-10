@@ -49,12 +49,15 @@ var_dump($salmon_tin);
             <h4><?php echo $item->getName(); ?></h4>
             <div>
                 <span> <?php echo $item->getCategory()->getName(); ?> </span>
+                <?php if(is_a($item, 'Food')) { ?>
+                    <span> <?php echo $item->getExpired() ?> </span> 
+                    <?php } ?>
             </div>
         </div>
         <?php } ?>
     </section>
 
-    <!-- <p><?php echo $schesir->getName() . ' for ' . $schesir->getCategory()->getName() . ' at the flavor of ' . $schesir->getFlavor() . '. Price: ' . $schesir->getPrice() . '€. To consume before: ' . $schesir->getExpire()  ?> </p> -->
+    <!-- <p><?php echo $schesir->getName() . ' for ' . $schesir->getCategory()->getName() . ' at the flavor of ' . $schesir->getFlavor() . '. Price: ' . $schesir->getPrice() . '€. To consume before: ' . $schesir->getExpired()  ?> </p> -->
     <!-- <p><?php echo $bone->getName() . ' for ' . $bone->getCategory()->getName() . ' ' . $bone->getPrice() . '€. Is a ' . $bone->type . ' made of ' . $bone->material  ?> </p> -->
 </body>
 </html>
