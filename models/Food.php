@@ -16,7 +16,7 @@ class Food extends Product{
          if(date('d-m-Y') < $_expire ){
              $this->expire = $_expire;
          } else {
-            echo "Expired";
+            return "Expired";
          }
      }
 

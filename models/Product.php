@@ -80,7 +80,7 @@ class Product{
         if($this->amount >= $amount_to_remove){
             $this->amount -= $amount_to_remove;
         } else {
-            echo "Error";
+            return "Error. Not enough products";
         }
     }
 
