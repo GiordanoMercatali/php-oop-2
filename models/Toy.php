@@ -15,4 +15,26 @@ class Toy extends Product{
         $this->type = $_type;
         
     }
+
+    // MATERIAL
+
+    public function setMaterial($_material){
+        
+            $this->material = $_material;
+    }
+
+    public function getMaterial(){
+       return $this->material;
+    }
+
+    // TYPE
+
+    public function setType($_type){
+        
+            $this->type = $_type;
+    }
+
+    public function getType(){
+       return $this->type;
+    }
 }

@@ -12,4 +12,15 @@ class Kennel extends Product{
         $this->size = $_size;
         
     }
+
+    // SIZE
+
+    public function setSize($_size){
+        
+            $this->size = $_size;
+    }
+
+    public function getSize(){
+       return $this->size;
+    }
 }

@@ -39,7 +39,19 @@ var_dump($bone);
     <title>Document</title>
 </head>
 <body>
-    <p><?php echo $schesir->getName() . ' for ' . $schesir->getCategory()->getName() . ' ' . $schesir->getPrice() . '€. To consume before: ' . $schesir->getExpire()  ?> </p>
-    <p><?php echo $bone->getName() . ' for ' . $bone->getCategory()->getName() . ' ' . $bone->getPrice() . '€. Is a ' . $bone->type . ' made of ' . $bone->material  ?> </p>
+
+    <section>
+        <?php foreach($item_list as $item) { ?>
+        <div>
+            <h4><?php echo $item->getName(); ?></h4>
+            <div>
+                <span> <?php echo $item->getCategory()->getName(); ?> </span>
+            </div>
+        </div>
+        <?php } ?>
+    </section>
+
+    <!-- <p><?php echo $schesir->getName() . ' for ' . $schesir->getCategory()->getName() . ' at the flavor of ' . $schesir->getFlavor() . '. Price: ' . $schesir->getPrice() . '€. To consume before: ' . $schesir->getExpire()  ?> </p> -->
+    <!-- <p><?php echo $bone->getName() . ' for ' . $bone->getCategory()->getName() . ' ' . $bone->getPrice() . '€. Is a ' . $bone->type . ' made of ' . $bone->material  ?> </p> -->
 </body>
 </html>
