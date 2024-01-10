@@ -6,9 +6,9 @@ require_once __DIR__ . "/../models/Food.php";
 require_once __DIR__ . "/../models/Toy.php";
 require_once __DIR__ . "/../models/Kennel.php";
 
-$dog = new Category ('dog', 'dog.png');
+$dog = new Category ('dog', 'fa-solid fa-dog');
 
-$cat = new Category ('cat', 'cat.png');
+$cat = new Category ('cat', 'fa-solid fa-cat');
 
 /*
     $newProduct = new Product();

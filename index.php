@@ -39,6 +39,7 @@ var_dump($salmon_tin);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -48,6 +49,7 @@ var_dump($salmon_tin);
         <div>
             <h4><?php echo $item->getName(); ?></h4>
             <div>
+                <i class="<?php echo $item->getCategory()->getIcon(); ?>"></i>
                 <span> <?php echo $item->getCategory()->getName(); ?> </span>
                 <?php if(is_a($item, 'Food')) { ?>
                     <span> <?php echo $item->getExpired() ?> </span> 
