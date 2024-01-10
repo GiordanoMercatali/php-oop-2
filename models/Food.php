@@ -6,14 +6,21 @@ class Food extends Product{
     
     protected $expire;
 
-    public function __construct($_name, $_image, $_category, $_price){
+    public function __construct($_name, /*$_image,*/ Category $_category, $_price, $_amount, $_expire){
         
-        parent::__construct($_name, $_image, $_category, $_price);
+        parent::__construct($_name, /*$_image,*/  $_category, $_price, $_amount);
+        $this->expire = $_expire;
     }
 
      public function setExpire($_expire){
-         if(date('Y-m-d') < $_expire ){
+         if(date('d-m-Y') < $_expire ){
              $this->expire = $_expire;
+         } else {
+            echo "Expired";
          }
+     }
+
+     public function getExpire(){
+        return $this->expire;
      }
 }

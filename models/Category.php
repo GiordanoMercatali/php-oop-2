@@ -1,7 +1,10 @@
 <?php
 class Category {
-    public $name; //dogs and cats
-    public $icon;
+    // public $name;
+    // public $icon;
+
+    private $name;
+    private $icon;
 
     /**
      * @param mixed $_name
@@ -11,11 +14,23 @@ class Category {
     public function __construct($_name, $_icon){
         // $this->setName = $_name;
         // $this->setIcon = $_icon;
-        $this->Name = $_name;
-        $this->Icon = $_icon;
+        $this->name = $_name;
+        $this->icon = $_icon;
     }
 
-    // public function getName(){
-    //     return $this->name;
-    // }
+    public function setName($_name){
+        $this->name = $_name;
+    }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function setIcon($_icon){
+        $this->icon = $_icon;
+    }
+
+    public function getIcon(){
+        return $this->icon;
+    }
 }
