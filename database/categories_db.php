@@ -20,6 +20,7 @@ $cat = new Category ('cat', 'fa-solid fa-cat');
 */
 $item_list = [
     $schesir = new Food ('Schesir', $cat, 4, 10, '2024-01-09', 'tuna'),
+    $schesir2 = new Food ('Schesir', $cat, 4, 10, '2025-01-09', 'salmon'),
     $bone = new Toy ('Toy bone', $dog, 2, 1, 'rubber', 'squeaking toy'),
     $wood_kennel = new Kennel ('Wood kennel', $dog, 100, 1, 'big'),
 ];

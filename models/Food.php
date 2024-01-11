@@ -18,9 +18,9 @@ class Food extends Product{
 
      public function setExpired($_expiration_date){
          if(date('Y-m-d') < $_expiration_date ){
-            $this->expiration_date = $_expiration_date;
+            $this->expiration_date = "To consume before: " . $_expiration_date . '.';
          } else {
-            return $this->expiration_date = "Expired";
+            return $this->expiration_date = "This product is expired!";
          }
      }
 

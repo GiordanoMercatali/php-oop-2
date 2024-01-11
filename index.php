@@ -50,10 +50,14 @@ var_dump($salmon_tin);
             <h4><?php echo $item->getName(); ?></h4>
             <div>
                 <i class="<?php echo $item->getCategory()->getIcon(); ?>"></i>
-                <span> <?php echo $item->getCategory()->getName(); ?> </span>
+                <span> <?php echo 'For: ' . $item->getCategory()->getName(); ?> </span>
                 <?php if(is_a($item, 'Food')) { ?>
-                    <span> <?php echo $item->getExpired() . ' ' . $item->getFlavor(); ?> </span> 
-                    <?php } ?>
+                    <span> <?php echo $item->getExpired() . ' At the flavor of: ' . $item->getFlavor(); ?> </span> 
+                    <?php } elseif(is_a($item, 'Toy')) { ?>
+                        <span> <?php echo 'Is a: ' . $item->getType() . ' mad of: ' . $item->getMaterial();  ?> </span>
+                    <?php } elseif(is_a($item, 'Kennel')) { ?>
+                        <span> <?php echo '.Is ' . $item->getSize(); ?> </span>
+                        <?php } ?>
             </div>
         </div>
         <?php } ?>

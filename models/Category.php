@@ -14,7 +14,7 @@ class Category {
     public function __construct($_name, $_icon){
         // $this->setName = $_name;
         // $this->setIcon = $_icon;
-        $this->name = $_name;
+        $this->name = ucfirst($_name);
         $this->icon = $_icon;
     }
 
